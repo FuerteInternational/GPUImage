@@ -4,12 +4,14 @@
 
 @interface GPUImageStillCamera ()
 {
-    AVCaptureStillImageOutput *photoOutput;
+    
 }
 
 @end
 
 @implementation GPUImageStillCamera
+
+@synthesize photoOutput;
 
 #pragma mark -
 #pragma mark Initialization and teardown

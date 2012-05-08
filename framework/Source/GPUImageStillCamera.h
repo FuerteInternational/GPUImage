@@ -1,6 +1,10 @@
 #import "GPUImageVideoCamera.h"
 
-@interface GPUImageStillCamera : GPUImageVideoCamera
+@interface GPUImageStillCamera : GPUImageVideoCamera {
+	AVCaptureStillImageOutput *photoOutput;
+}
+
+@property (nonatomic, strong) AVCaptureStillImageOutput *photoOutput;
 
 // Photography controls
 - (void)capturePhotoAsImageProcessedUpToFilter:(GPUImageOutput<GPUImageInput> *)finalFilterInChain withCompletionHandler:(void (^)(UIImage *processedImage, NSError *error))block;
